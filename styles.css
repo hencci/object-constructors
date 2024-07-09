@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #0284C7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #FFFFFF;
+    height: 5rem;
+}
+
+h1 {
+    font-size: 40px;
+}
