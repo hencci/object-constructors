@@ -27,7 +27,7 @@ h1 {
 
 .books {
     display: grid;
-    grid-template-columns: repeat(autofill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     background-image: url(icons/Books.jpg);
     background-size: cover;
     background-position: center;
@@ -38,6 +38,16 @@ h1 {
 }
 
 .book {
-    height: 200px;
-    background-color: rgba(68, 64, 64, 0.9);
+    background-color: rgba(64, 64, 64, 0.9);
+    padding: 16px;
+    height: 400px; 
+    width: 300px;
+    border: 2px solid #fbf8f7;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1.5fr 1fr 1fr 1fr;
+    justify-self: center; 
+    align-self: start;
+    color: beige;
 }
