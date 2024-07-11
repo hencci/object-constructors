@@ -18,3 +18,18 @@
 h1 {
     font-size: 40px;
 }
+
+.container {
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+    height: 100vh;
+}
+
+.books {
+    display: grid;
+    grid-template-columns: repeat(autofill, minmax(300px, 1fr));
+    background-image: url(icons/Books.jpg);
+    background-size: cover;
+    gap: 16px;
+    padding: 30px;
+}
