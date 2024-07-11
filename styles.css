@@ -30,6 +30,14 @@ h1 {
     grid-template-columns: repeat(autofill, minmax(300px, 1fr));
     background-image: url(icons/Books.jpg);
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     gap: 16px;
     padding: 30px;
+}
+
+.book {
+    height: 200px;
+    background-color: rgba(68, 64, 64, 0.9);
 }
