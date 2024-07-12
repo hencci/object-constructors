@@ -10,8 +10,8 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #FFFFFF;
+    font-family: cursive;
+    color: bisque;
     height: 5rem;
 }
 
@@ -38,16 +38,25 @@ h1 {
 }
 
 .book {
-    background-color: rgba(64, 64, 64, 0.9);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 16px;
     height: 400px; 
     width: 300px;
-    border: 2px solid #fbf8f7;
+    border: 2px solid brown;
     border-radius: 5px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1.5fr 1fr 1fr 1fr;
     justify-self: center; 
     align-self: start;
-    color: beige;
+    color: brown;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.material-symbols-outlined {
+    font-size: 70px !important;
+    align-self: center;
+    justify-self: center;
+    grid-area: 1 / 1/ 4/ 3;
+    transform: translateY(30px);
 }
