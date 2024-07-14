@@ -13,6 +13,12 @@ function Book (title, author, pages, read) {
     };
 }
 
+
+let bookContainer = document.querySelector(".books");
+let newBookBoard = document.querySelector("#new-entry");
+let newBookSubmitButton = document.querySelector("button");
+let newBookButton = document.querySelector(".add-new");
+
 function addBookToLibrary() {
-    
+
 }
