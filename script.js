@@ -19,6 +19,19 @@ let newBookBoard = document.querySelector("#new-entry");
 let newBookSubmitButton = document.querySelector("button");
 let newBookButton = document.querySelector(".add-new");
 
+
 function addBookToLibrary() {
 
 }
+
+
+newBookSubmitButton.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    let nameField = document.querySelector("#new-book-title");
+    let authorField = document.querySelector("#new-book-author");
+    let pagesField = document.querySelector("#new-book-pages");
+    let read = document.querySelector("#read").checked;
+
+    let isValid = true;
+});
