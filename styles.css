@@ -178,3 +178,10 @@ h1 {
   #read{
     transform: scale(1.5);
   }
+
+  .input-error {
+    border: 2px solid red !important;
+  }
+  input[type="radio"]:checked + label {
+    filter: brightness(100%);
+  }
