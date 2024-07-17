@@ -20,9 +20,33 @@ let newBookSubmitButton = document.querySelector("button");
 let newBookButton = document.querySelector(".add-new");
 
 
-function addBookToLibrary() {
+function addBookToLibrary(title, author, pages, read) {
+    let newBook = new Book(title, author, pages, read, rating);
+    myLibrary.push(newBook);
 
+    let readStatus;
+    if (read === true){
+        readStatus = '<p class="read">Read</p>'
+    } else {
+        readStatus = '';
+    }
+
+    let latestBookAdded = document.querySelector(".books .book:nth-child(3)")
+    newBookBoard.setAttribute("style", "display:none;");
+    latestBookAdded.insertAdjacentHTML("beforebegin",
+        `<div class = "book">
+            <div class = "title">${title}</div>
+            <div class = "author">${author}</div>
+            <div class = "pages">${pages} pages</div>
+            ${readStatus}
+        </div>`
+      );
+      return newBook;
 }
+
+newBookButton.addEventListener("click", (e) => {
+    newBookBoard.toggleAttribute("style");
+});
 
 
 newBookSubmitButton.addEventListener("click", (e) => {
