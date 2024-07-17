@@ -8,7 +8,7 @@ function Book (title, author, pages, read) {
 
     this.info = function() {
         let readStatus = this.read? "read" : "not read yet"
-        return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`
+        return `${this.title} by ${this.author}, ${this.pages} pages, ${this.readStatus}`;
 
     };
 }
@@ -16,29 +16,32 @@ function Book (title, author, pages, read) {
 
 let bookContainer = document.querySelector(".books");
 let newBookBoard = document.querySelector("#new-entry");
-let newBookSubmitButton = document.querySelector("button");
+let newBookSubmitButton = document.querySelector("#new-book-submit");
 let newBookButton = document.querySelector(".add-new");
 
 
 function addBookToLibrary(title, author, pages, read) {
-    let newBook = new Book(title, author, pages, read, rating);
+    let newBook = new Book(title, author, pages, read);
     myLibrary.push(newBook);
 
-    let readStatus;
+    let readStats;
+    console.log(read);
     if (read === true){
-        readStatus = '<p class="read">Read</p>'
+        readStats = '<p class="read">Read</p>'
     } else {
-        readStatus = '';
+        readStats = '';
     }
+    console.log(readStats);
 
     let latestBookAdded = document.querySelector(".books .book:nth-child(3)")
     newBookBoard.setAttribute("style", "display:none;");
+    console.log(latestBookAdded);
     latestBookAdded.insertAdjacentHTML("beforebegin",
         `<div class = "book">
             <div class = "title">${title}</div>
             <div class = "author">${author}</div>
             <div class = "pages">${pages} pages</div>
-            ${readStatus}
+            ${readStats}
         </div>`
       );
       return newBook;
@@ -87,4 +90,14 @@ newBookSubmitButton.addEventListener("click", (e) => {
     console.log("Please fill out all required fields.");
     return;
     }
+
+
+    addBookToLibrary(nameField.value, authorField.value, pagesField.value, read);
+    console.log(`read ${read}`)
+    document.querySelector("#new-book").reset();
+  
+    
+    nameField.classList.remove('input-error');
+    authorField.classList.remove('input-error');
+    pagesField.classList.remove('input-error');
 });
