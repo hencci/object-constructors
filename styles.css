@@ -37,12 +37,24 @@ h1 {
     padding: 30px;
 }
 
+@keyframes spawn-in {
+    from {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 .book {
-    background-color: rgba(255, 255, 255, 0.9);
+    animation: spawn-in 500ms;
+    background-color: rgba(156, 188, 240, 0.8);
     padding: 16px;
     height: 400px; 
     width: 300px;
-    border: 2px solid #6c3a19;
+    border: 2px solid #0284C7;
     border-radius: 5px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -52,6 +64,10 @@ h1 {
     color: #6c3a19;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     transition: 200ms;
+    box-sizing: border-box;
+    justify-self: center; 
+    align-self: start;
+    color: #6c3a19;
 }
 
 .material-symbols-outlined {
@@ -68,7 +84,7 @@ h1 {
 
 .add-new:hover {
     transform: scale(97%);
-    background: #6c3a19;
+    background: #0284C7;
     cursor: pointer;
   }
 
@@ -101,7 +117,7 @@ h1 {
     border-radius: 10px;
   }
 
-  .new-entry {
+  #new-entry {
     display: flex;
     flex-direction: column;
   }
@@ -111,12 +127,14 @@ h1 {
     flex-direction: column;
     align-items: center;
   }
+
   #new-book input{
      max-width: 100%; 
      padding: 20px;
      box-sizing: border-box;
      text-align: center;
   }
+
   textarea {
     resize: none;
     line-height: 1.2;
@@ -125,15 +143,19 @@ h1 {
     color: #6c3a19;
     width: 100%;
   }
+
   textarea::placeholder{
     text-align: center;
     vertical-align: middle;
     line-height: inherit;
   }
+
   #new-book-submit:hover{
-    background-color: #6c3a19;
+    background-color: #0284C7;
     color: white;
+    cursor: pointer;
   }
+
   .btn {
     padding: 10px 50px;
     border: 2px solid #6c3a19 ;
@@ -141,10 +163,13 @@ h1 {
     font-size: 2rem;
     display: inline-block;
     color: #6c3a19;
+    height: 140px;
   }
+
   #new-book > * {
     margin: 5px;
   }
+
   #new-book-author{
     height: 34px;
     align-self: center;
@@ -152,9 +177,11 @@ h1 {
     overflow-wrap: break-word;
     color: #6c3a19;
   }
+
   input {
     overflow-wrap: break-word;
   }
+
   #new-book-pages{
     height: 30px;
     width: 80%;
@@ -166,22 +193,27 @@ h1 {
    justify-content: center;
    align-items: center;
   }
+
   #new-book > *:nth-child(3) > * {
     margin: 5px;
   }
+
   .read-align{
     display: flex;
     flex-direction: column;
     font-size: 20px;
     transform: translateY(-8px);
   }
+
   #read{
     transform: scale(1.5);
+    cursor: pointer;
   }
 
   .input-error {
     border: 2px solid red !important;
   }
+
   input[type="radio"]:checked + label {
     filter: brightness(100%);
   }
